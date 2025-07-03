@@ -162,8 +162,8 @@ export default function ResultsPage() {
     const apiData= JSON.stringify(userSelecetedResponse, null, 2);
 
     async function fetchRecommendations() {
-      const response =await axios.post(
-        "http://localhost:5000/recommendations",
+      const response = await axios.post(
+        "https://cource.onrender.com/recommendations",
         apiData
       );
 
