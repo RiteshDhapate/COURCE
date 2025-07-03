@@ -16,6 +16,10 @@ app.use(cors());
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Course Recommendation API!");
+});
+
 // 3. Define the API Endpoint
 app.post("/recommendations", async (req, res) => {
   // a. Get user answers from the request body
